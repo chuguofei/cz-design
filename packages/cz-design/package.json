@@ -1,0 +1,20 @@
+{
+  "name": "@cz-design/main",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "serve": "vite",
+    "start": "cz-scripts dev:component"
+  },
+  "dependencies": {
+    "@vueuse/core": "^10.2.1",
+    "pinia": "^2.1.4",
+    "sass": "^1.63.6",
+    "vue": "^3.3.4",
+    "vue-router": "^4.2.4"
+  },
+  "devDependencies": {
+    "@cz-design/scripts": "^1.0.0",
+    "vite": "^4.4.4"
+  }
+}

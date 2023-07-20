@@ -1,0 +1,26 @@
+$headerHeight: 66px;
+
+.zs {
+    &-dashboard {
+        width: 100%;
+        height: 100vh;
+        box-sizing: border-box;
+    }
+
+    &-header {
+        position: fixed;
+        width: 100%;
+        height: $headerHeight;
+        box-sizing: border-box;
+        border-bottom: 1px #ccc solid;
+        background-color: #ffffff;
+    }
+
+    &-container {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        padding-top: $headerHeight;
+        box-sizing: border-box;
+    }
+}

@@ -1,0 +1,21 @@
+@use './common/index.scss';
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+}
+
+ol,
+ul {
+  padding: 0;
+  margin: 0;
+}
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #1b2337;
+}

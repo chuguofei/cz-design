@@ -21,7 +21,18 @@
     "typescript": "^5.1.6"
   },
   "devDependencies": {
+    "@pnpm/find-workspace-dir": "^6.0.2",
+    "@pnpm/find-workspace-packages": "^6.0.9",
     "@types/fs-extra": "^11.0.1",
-    "@types/node": "^20.4.2"
+    "@types/node": "^20.4.2",
+    "@vitejs/plugin-vue": "^4.2.3",
+    "camelcase": "^7.0.1",
+    "consola": "^3.2.3",
+    "esbuild": "^0.18.15",
+    "fast-glob": "^3.3.0",
+    "tsx": "^3.12.7",
+    "unplugin-vue": "^4.2.5",
+    "vite": "^4.4.4",
+    "vite-plugin-vue-setup-extend": "^0.4.0"
   }
 }

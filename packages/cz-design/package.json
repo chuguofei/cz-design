@@ -2,9 +2,13 @@
   "name": "@cz-design/main",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "serve": "vite",
-    "start": "cz-scripts dev:component"
+    "init": "pnpm run icon:generate",
+    "start": "scripts server:dev",
+    "build": "scripts build",
+    "build1": "vite build",
+    "start1": "vite"
   },
   "dependencies": {
     "@vueuse/core": "^10.2.1",

@@ -2,14 +2,14 @@
   <div class="banner-search-warpper">
     <input v-model="search" class="search-input" />
     <span class="search-close icon">
-      <CloseIcon color="red" />
+      <Close style="width: 1em; height: 1em; margin-right: 8px" />
     </span>
   </div>
 </template>
 
 <script name="BannerSearchInput" setup lang="ts">
 import { ref } from 'vue'
-import CloseIcon from '@/icon/close.vue'
+import { Close } from '@cz-design/icon'
 
 const search = ref('')
 </script>

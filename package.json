@@ -3,11 +3,9 @@
   "private": true,
   "version": "0.0.1",
   "type": "module",
-  "workspaces": [
-    "packages/*"
-  ],
   "scripts": {
-    "init": "lerna run build --stream --scope=@cz-design/{scripts,main} && lerna link",
+    "init": "lerna run build --stream --scope=@cz-design/scripts && lerna link && lerna run init --scope=@cz-design/main && pnpm run icon:generate",
+    "icon:generate": "yarn workspace @cz-design/icon run build",
     "start": "yarn workspace @cz-design/main run start",
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
@@ -15,6 +13,7 @@
     "lint:prettier": "prettier --write  \"src/**/*.{js,json,tsx,css,less,scss,vue,html,md}\""
   },
   "devDependencies": {
+    "@cz-design/icon": "^0.0.1",
     "@cz-design/main": "^1.0.0",
     "@cz-design/scripts": "^1.0.0",
     "@types/node": "^20.4.2",
@@ -22,6 +21,7 @@
     "@typescript-eslint/parser": "^6.1.0",
     "@vitejs/plugin-vue": "^4.2.3",
     "autoprefixer": "^10.4.14",
+    "chalk": "^4.1.2",
     "eslint": "^8.45.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-define-config": "^1.21.0",

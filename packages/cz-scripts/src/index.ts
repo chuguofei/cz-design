@@ -2,6 +2,7 @@
 import path from 'path'
 import fs from 'fs-extra'
 import { Command } from 'commander'
+import { ServerDev, IconGenerateComponent, IconBuild, buildProd } from './scripts'
 
 const program = new Command()
 
@@ -9,13 +10,30 @@ const packageContent = fs.readFileSync(path.resolve(__dirname, '../package.json'
 
 const packageData: any = JSON.parse(packageContent)
 
-program.version(packageData.version).name('cz-scripts').usage('command [options]')
+program.version(packageData.version).usage('command [options]')
 
 program
-  .command('dev:component')
-  .description('项目启动')
+  .command('server:dev')
+  .description('本地服务')
   .action(async () => {
-    console.log('========')
+    await ServerDev()
+  })
+
+program
+  .command('build')
+  .description('打包')
+  .action(async () => {
+    await buildProd()
+  })
+
+program
+  .command('icon:generate')
+  .description('生成图标库')
+  .action(async () => {
+    // generate component
+    await IconGenerateComponent()
+    // build icon
+    // await IconBuild()
   })
 
 program.parse(process.argv)

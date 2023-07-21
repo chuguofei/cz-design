@@ -29,7 +29,7 @@ const routes = [
     name: 'template',
     children: [
       {
-        path: '/',
+        path: '/template',
         component: () => import('@/views/template/index.vue'),
       },
     ],
@@ -40,7 +40,7 @@ const routes = [
     name: 'material',
     children: [
       {
-        path: '/',
+        path: '/material',
         component: () => import('@/views/material/index.vue'),
       },
     ],

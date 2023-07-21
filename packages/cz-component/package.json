@@ -1,0 +1,6 @@
+{
+  "name": "@cz-design/component",
+  "version": "1.0.0",
+  "description": "组件库",
+  "main": "index.ts"
+}

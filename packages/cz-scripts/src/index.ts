@@ -2,7 +2,7 @@
 import path from 'path'
 import fs from 'fs-extra'
 import { Command } from 'commander'
-import { ServerDev, IconGenerateComponent, IconBuild, buildProd } from './scripts'
+import { ServerDev, IconGenerateComponent, buildProd } from './scripts'
 
 const program = new Command()
 
@@ -32,8 +32,6 @@ program
   .action(async () => {
     // generate component
     await IconGenerateComponent()
-    // build icon
-    // await IconBuild()
   })
 
 program.parse(process.argv)

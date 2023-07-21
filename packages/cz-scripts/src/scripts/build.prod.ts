@@ -10,7 +10,7 @@ const config: InlineConfig = {
     alias: [
       {
         find: '@',
-        replacement: path.resolve(root, '../cz-design/src'),
+        replacement: path.resolve(root, '../cz-web/src'),
       },
     ],
   },

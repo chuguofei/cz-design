@@ -19,16 +19,14 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "baseUrl": "./",
-    "paths": {
-      "@/*": ["packages/cz-design/src/*"]
-    }
+    "baseUrl": "./"
   },
   "include": [
     "packages/cz-design/src/**/*.ts",
     "packages/cz-design/src/**/*.d.ts",
     "packages/cz-design/src/**/*.tsx",
-    "packages/cz-design/src/**/*.vue"
+    "packages/cz-design/src/**/*.vue",
+    "packages/cz-component/**/*.vue"
   ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

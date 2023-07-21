@@ -70,7 +70,7 @@ const generateEntry = async (files: string[]) => {
 }
 
 async function main() {
-  consola.log(chalk.blue('开始生成icon vue component'))
+  consola.log(chalk.red('icon:gen start =============>>>'))
 
   await ensureDir(pathComponent)
   await emptyDir(pathComponent)
@@ -81,7 +81,7 @@ async function main() {
   consola.info(chalk.blue('开始生成 icon export'))
   await generateEntry(files)
 
-  consola.info(chalk.green('任务执行成功'))
+  consola.info(chalk.green('icon:gen end <<<============='))
 }
 
 export default main

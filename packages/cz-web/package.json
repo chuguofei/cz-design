@@ -1,0 +1,26 @@
+{
+  "name": "@cz-design/web",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "icon:gen": "scripts icon:generate && pnpm --filter @cz-design/icon build",
+    "start": "scripts server:dev",
+    "build": "scripts build",
+    "lint:eslint": "eslint --cache --max-warnings 0  \"{src,mock}/**/*.{vue,ts,tsx}\" --fix",
+    "lint:prettier": "prettier --write  \"src/**/*.{js,json,tsx,css,less,scss,vue,html,md}\""
+  },
+  "dependencies": {
+    "@cz-design/component": "workspace:^",
+    "@vueuse/core": "^10.2.1",
+    "pinia": "^2.1.4",
+    "sass": "^1.63.6",
+    "vue": "^3.3.4",
+    "vue-router": "^4.2.4"
+  },
+  "devDependencies": {
+    "@cz-design/icon": "workspace:^1.0.0",
+    "@cz-design/scripts": "workspace:^1.0.0",
+    "vite": "^4.4.4"
+  }
+}

@@ -6,12 +6,15 @@
   "scripts": {
     "icon:gen": "scripts icon:generate && pnpm --filter @cz-design/icon build",
     "start": "scripts server:dev",
+    "build:styles": "scripts build:styles",
     "build": "scripts build",
     "lint:eslint": "eslint --cache --max-warnings 0  \"{src,mock}/**/*.{vue,ts,tsx}\" --fix",
     "lint:prettier": "prettier --write  \"src/**/*.{js,json,tsx,css,less,scss,vue,html,md}\""
   },
   "dependencies": {
     "@cz-design/component": "workspace:^",
+    "@cz-design/styles": "workspace:^",
+    "@cz-design/utils": "workspace:^",
     "@vueuse/core": "^10.2.1",
     "pinia": "^2.1.4",
     "sass": "^1.63.6",

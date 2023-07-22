@@ -1,6 +1,7 @@
 import { createServer, defineConfig, InlineConfig, resolveConfig } from 'vite'
 import path from 'path'
 import vue from '@vitejs/plugin-vue'
+import vueJsx from '@vitejs/plugin-vue-jsx'
 import setupExtend from 'vite-plugin-vue-setup-extend'
 import consola from 'consola'
 import chalk from 'chalk'
@@ -9,7 +10,7 @@ import { printServerUrls } from './utils/logger'
 const root = process.cwd()
 
 const config = defineConfig({
-  plugins: [vue(), setupExtend()],
+  plugins: [vue(), vueJsx(), setupExtend()],
   mode: 'development',
   server: {
     port: 3000,

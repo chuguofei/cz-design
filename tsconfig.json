@@ -26,7 +26,8 @@
     "packages/cz-design/src/**/*.d.ts",
     "packages/cz-design/src/**/*.tsx",
     "packages/cz-design/src/**/*.vue",
-    "packages/cz-component/**/*.vue"
+    "packages/cz-component/**/*.vue",
+    "packages/cz-component/**/*.tsx"
   ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

@@ -1,0 +1,9 @@
+{
+  "name": "@cz-design/styles",
+  "version": "1.0.0",
+  "description": "component styles",
+  "main": "src/index.scss",
+  "dependencies": {
+    "scss": "^0.2.4"
+  }
+}

@@ -2,7 +2,7 @@
 import path from 'path'
 import fs from 'fs-extra'
 import { Command } from 'commander'
-import { ServerDev, IconGenerateComponent, buildProd } from './scripts'
+import { ServerDev, IconGenerateComponent, buildProd, BuildStyle } from './scripts'
 
 const program = new Command()
 
@@ -32,6 +32,13 @@ program
   .action(async () => {
     // generate component
     await IconGenerateComponent()
+  })
+
+program
+  .command('build:styles')
+  .description('打包样式')
+  .action(async () => {
+    await BuildStyle()
   })
 
 program.parse(process.argv)

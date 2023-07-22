@@ -2,16 +2,17 @@
   <div class="banner-search-warpper">
     <input v-model="search" class="search-input" />
     <span class="search-close icon">
-      <Close style="width: 1em; height: 1em; margin-right: 8px" />
+      <CircleClose style="width: 1em; height: 1em; margin-right: 8px" />
       <CzIcon />
+      <Input />
     </span>
   </div>
 </template>
 
 <script name="BannerSearchInput" setup lang="ts">
 import { ref } from 'vue'
-import { Close } from '@cz-design/icon'
-import { CzIcon } from '@cz-design/component'
+import { CircleClose } from '@cz-design/icon'
+import { CzIcon, Input } from '@cz-design/component'
 
 const search = ref('')
 </script>

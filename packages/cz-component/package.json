@@ -4,6 +4,7 @@
   "description": "组件库",
   "main": "index.ts",
   "dependencies": {
+    "@cz-design/icon": "workspace:^",
     "@cz-design/utils": "workspace:^"
   },
   "devDependencies": {

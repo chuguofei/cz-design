@@ -1,0 +1,67 @@
+@use 'sass:map';
+
+@mixin input-warpper-style($cls) {
+  display: inline-flex;
+  box-sizing: border-box;
+  width: 100%;
+  cursor: text;
+  padding-left: $spacing-6;
+  padding-right: $spacing-6;
+  background-color: #fff;
+  border: 1px solid $input-border-color;
+  border-radius: $input-border-radius;
+
+  &:hover .#{$cls}-clear-btn {
+    visibility: visible;
+  }
+
+  .#{$cls}-clear-btn {
+    align-self: center;
+    cursor: pointer;
+    visibility: hidden;
+    color: $input-color-icon-clear;
+    font-size: $input-size-icon-clear;
+
+    > svg {
+      position: relative;
+    }
+  }
+
+  &.#{$cls}-focus {
+    border: 1px $input-color-border_focus solid;
+  }
+}
+
+@mixin input-style() {
+  width: 100%;
+  padding-right: 0;
+  padding-left: 0;
+  color: inherit;
+  background: none;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  cursor: inherit;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  color: $input-color-text;
+
+  &::placeholder {
+    color: $input-placeholder-color;
+  }
+}
+
+@mixin input-size($size) {
+  $fontSize: map.get($input-size, $size);
+  $padding: map.get($input-space, $size);
+
+  font-size: $fontSize;
+  padding-top: $padding;
+  padding-bottom: $padding;
+
+  @if ($size == 'mini') {
+    line-height: 1.667;
+  } @else {
+    line-height: $base-line-height;
+  }
+}

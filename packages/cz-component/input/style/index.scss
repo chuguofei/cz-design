@@ -1,0 +1,19 @@
+@import '../../style/index.scss';
+@import './var.scss';
+@import './input.scss';
+
+$cls: 'cz-input';
+
+.#{$cls}-wrapper {
+  @include input-warpper-style($cls);
+}
+
+.#{$cls} {
+  @include input-style();
+}
+
+@each $size in (mini, small, medium, large) {
+  .#{$cls}-size-#{$size} {
+    @include input-size($size);
+  }
+}

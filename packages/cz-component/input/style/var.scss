@@ -1,0 +1,25 @@
+$input-padding-x: 12px;
+
+$input-border-color: var(--color-text-4);
+$input-border-radius: $border-radius-small;
+
+$input-color-border_focus: #3742fa;
+$input-color-text: var(--color-text-1);
+$input-placeholder-color: var(--color-text-3);
+
+$input-color-icon-clear: var(--color-text-3);
+$input-size-icon-clear: var($size-3);
+
+$input-size: (
+  'mini': $font-size-body-1,
+  'small': $font-size-body-3,
+  'medium': $font-size-body-3,
+  'large': $font-size-body-3,
+);
+
+$input-space: (
+  'mini': 1px,
+  'small': 2px,
+  'medium': 6px,
+  'large': 6px,
+);

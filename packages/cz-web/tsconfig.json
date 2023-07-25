@@ -6,7 +6,6 @@
     "rootDir": "./",
     "allowJs": true,
     "checkJs": true,
-    "esModuleInterop": true /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables 'allowSyntheticDefaultImports' for type compatibility. */,
     "forceConsistentCasingInFileNames": true /* Ensure that casing is correct in imports. */,
     // 严格类型
     "strict": true,
@@ -16,6 +15,7 @@
     // 允许导入json
     "resolveJsonModule": true,
     "jsx": "preserve",
+    "esModuleInterop": true,
     // 删除注释
     "removeComments": true,
     "lib": ["ESNext", "DOM", "DOM.Iterable"],

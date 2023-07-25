@@ -1,0 +1,13 @@
+@import './color.scss';
+@import './global.scss';
+
+:root {
+  --color-text-1: #{$gray-10};
+  --color-text-2: #{$gray-8};
+  --color-text-3: #{$gray-6};
+  --color-text-4: #{$gray-4};
+  --color-text-5: #{$gray-2};
+
+  --color-white: white;
+  --color-black: black;
+}

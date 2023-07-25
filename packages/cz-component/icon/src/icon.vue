@@ -1,5 +1,7 @@
 <template>
-  <i class="cz-icon" :style="style" v-bind="$attrs"></i>
+  <i class="cz-icon" :style="style" v-bind="$attrs">
+    <slot></slot>
+  </i>
 </template>
 
 <script lang="ts" setup>
@@ -7,7 +9,7 @@ import { computed, PropType } from 'vue'
 import { isUndefined, addUnit } from '@cz-design/utils'
 
 defineOptions({
-  name: 'CzIcon',
+  name: 'Icon',
   inheritAttrs: false,
 })
 

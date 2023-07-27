@@ -1,5 +1,6 @@
 import { RouteRecordRaw, createRouter, createWebHashHistory } from 'vue-router'
 import Layout from '@/layout/index.vue'
+import AILayout from '@/views/ai/index.vue'
 
 const routes: RouteRecordRaw[] = [
   {
@@ -43,6 +44,22 @@ const routes: RouteRecordRaw[] = [
       {
         path: '/material',
         component: () => import('@/views/material/index.vue'),
+      },
+    ],
+  },
+  {
+    path: '/ai',
+    name: 'ai',
+    redirect: '/ai/plaza',
+    component: AILayout,
+    children: [
+      {
+        path: '/ai/plaza',
+        component: () => import('@/views/ai/plaza/index.vue'),
+      },
+      {
+        path: '/ai/tools',
+        component: () => import('@/views/ai/tools/index'),
       },
     ],
   },

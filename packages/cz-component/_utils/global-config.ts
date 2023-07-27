@@ -28,7 +28,6 @@ export const getPrefixCls = (componentName?: string): string => {
   const configProvider = inject(configProviderInjectionKey, undefined)
 
   // 先去看 app provider 中有没有实现，没有在去组件的instance 中查看，最后看是否传入
-  console.error(instance?.appContext.config.globalProperties[GLOBAL_CONFIG_NAME])
   const prefix =
     configProvider?.prefixCls ??
     instance?.appContext.config.globalProperties[GLOBAL_CONFIG_NAME]?.classPrefix ??

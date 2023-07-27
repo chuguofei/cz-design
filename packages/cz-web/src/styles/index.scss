@@ -1,4 +1,7 @@
 @use './common/index.scss';
+@use 'sass:map';
+@use 'sass:math';
+@import './tailwind.css';
 
 body,
 html {
@@ -19,3 +22,13 @@ a {
   text-decoration: none;
   color: #1b2337;
 }
+
+@mixin set-color-mix-level($color, $number, $mix-color: white) {
+  $color: mix($mix-color, $color, math.percentage(math.div($number, 10)));
+  @debug $number + "00 : '" + $color + "',";
+}
+@debug '--->';
+@for $i from 1 through 9 {
+  @include set-color-mix-level(#3695f6, $i);
+}
+@debug '--->';

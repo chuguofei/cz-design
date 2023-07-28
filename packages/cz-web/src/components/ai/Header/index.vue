@@ -1,5 +1,5 @@
 <template>
-  <header :class="cls" class="w-full h-16 flex items-center px-4 bg-white shadow-xl">
+  <header :class="cls" class="w-full flex items-center px-4 bg-white">
     <span @click="handleRouterTo('/ai')" class="logo text-lg font-bold mr-2 cursor-pointer">
       AI助手
     </span>

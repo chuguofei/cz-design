@@ -19,7 +19,7 @@ const buildBundle = () => {
       // minify: true,
       bundle: true,
       banner: {
-        js: `/*! Element Plus Icons Vue v */\n`,
+        js: `/*! CzDesign Icons Vue v */\n`,
       },
       external: ['vue'],
       plugins: [

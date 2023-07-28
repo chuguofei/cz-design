@@ -1,6 +1,7 @@
 import { RouteRecordRaw, createRouter, createWebHashHistory } from 'vue-router'
 import Layout from '@/layout/index.vue'
-import AILayout from '@/views/ai/index.vue'
+import AIHomeLayout from '@/views/ai/layout/AiHome.vue'
+import AiDesignLayout from '@/views/ai/layout/AiDesign.vue'
 
 const routes: RouteRecordRaw[] = [
   {
@@ -51,7 +52,7 @@ const routes: RouteRecordRaw[] = [
     path: '/ai',
     name: 'ai',
     redirect: '/ai/plaza',
-    component: AILayout,
+    component: AIHomeLayout,
     children: [
       {
         path: '/ai/plaza',
@@ -60,6 +61,18 @@ const routes: RouteRecordRaw[] = [
       {
         path: '/ai/tools',
         component: () => import('@/views/ai/tools/index'),
+      },
+    ],
+  },
+  {
+    path: '/aidesign',
+    name: 'aidesign',
+    redirect: '/ai/aidesign',
+    component: AiDesignLayout,
+    children: [
+      {
+        path: '/aidesign/txtToImg',
+        component: () => import('@/views/ai/design/textToImg.vue'),
       },
     ],
   },

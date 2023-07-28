@@ -9,6 +9,12 @@ html {
   margin: 0;
 }
 
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
 ol,
 ul {
   padding: 0;
@@ -29,6 +35,6 @@ a {
 }
 @debug '--->';
 @for $i from 1 through 9 {
-  @include set-color-mix-level(#3695f6, $i);
+  @include set-color-mix-level(#1e90ff, $i);
 }
 @debug '--->';

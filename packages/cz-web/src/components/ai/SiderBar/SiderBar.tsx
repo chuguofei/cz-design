@@ -3,7 +3,7 @@ import { useRoute, useRouter } from 'vue-router'
 
 export default defineComponent({
   name: 'AISiderBar',
-  setup() {
+  setup(props, { attrs }) {
     const route = useRoute()
     const router = useRouter()
 
@@ -29,7 +29,7 @@ export default defineComponent({
     const render = () => {
       return (
         <>
-          <nav class="w-48 border h-full bg-white">
+          <nav {...attrs} class={`w-48 border bg-white`}>
             <ul>
               {siderBar.value.map((item) => {
                 return (
